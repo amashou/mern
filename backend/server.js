@@ -21,6 +21,10 @@ const usersRotuer = require("./routes/users");
 
 app.use("/exercises", exercisesRouter);
 app.use("/users", usersRotuer);
+app.get('/', (req, res) => {
+  console.log('get first requirest')
+  res.send('success request to AWS EC2!')
+})
 
 app.listen(port, () => {
   console.log(`Server is running on port : ${port}`);
